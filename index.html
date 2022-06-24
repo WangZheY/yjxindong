@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+</head>
+<style>
+    html, body, div {
+        height: 100%;
+        margin: 0;
+    }
+    div {
+        padding-top: 500px;
+        /* box-sizing: border-box; */
+        background: url('./images/a.webp');
+        /* background-size: 100px; */
+    }
+    #inp {
+        width: 200px;
+        height: 30px;
+        box-shadow: 0 0 5px rgb(187, 183, 183);
+    }
+    #but {
+        width: 200px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        /* background-color: yellowgreen; */
+        /* box-shadow: 0 0 5px rgb(187, 183, 183); */
+    }
+
+    #span {
+        color: #333333;
+    }
+</style>
+
+<body>
+    <div>
+        <p>
+<!--             <h1>必须带上耳机！！！！</h1> -->
+        </p>
+        <p style="width: 500px; margin: 0 auto;">
+            <input type="text" id="inp">
+            <span id="but">点击登录</span>
+        </p>
+        <p style="width: 500px; margin: 0 auto;">
+            <span id="span"></span>
+        </p>
+    </div>
+</body>
+<script>
+    let $ = function (id) {
+        return document.getElementById(id);
+    }
+    $('but').onclick = function () {
+        if ($('inp').value === '杨晶') {
+            alert('登陆成功！')
+            window.location.href = './login/index.html'
+        } else {
+            $('span').innerText = '请输入您的正确姓名进行登录！'
+        }
+    }
+</script>
+
+</html>
